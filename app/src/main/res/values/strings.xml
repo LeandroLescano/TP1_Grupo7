@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tp1Grupo7</string>
+    <string name="ejercicio_1">Ejercicio 1</string>
+    <string name="ejercicio_2">Ejercicio 2</string>
+    <string name="integrantes">Integrantes:\nCassano Juan Cruz\nGallardo Franco\nLescano Leandro\nPerez Ezequiel</string>
+    <string name="primer_numero">Primer número:</string>
+    <string name="segundo_numero">Segundo número:</string>
+    <string name="calcular">Calcular</string>
+</resources>
