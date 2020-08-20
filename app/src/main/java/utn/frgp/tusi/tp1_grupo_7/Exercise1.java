@@ -34,13 +34,16 @@ public class Exercise1 extends AppCompatActivity {
     String valorUno = primerNum.getText().toString();
     String valorDos = segNum.getText().toString();
 
-    int numUno = Integer.parseInt(valorUno);
-    int numDos = Integer.parseInt(valorDos);
-    int numRes = numUno + numDos;
+    if(valorUno.length() > 0 && valorDos.length() > 0){
+        int numUno = Integer.parseInt(valorUno);
+        int numDos = Integer.parseInt(valorDos);
+        int numRes = numUno + numDos;
 
-    String result = String.valueOf(numRes);
-    res.setText(result);
-
+        String result = String.valueOf(numRes);
+        res.setText(result);
+        }else{
+        res.setText("Debe ingresar números válidos!");
+    }
     }
 
 }

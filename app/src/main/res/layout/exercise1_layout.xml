@@ -1,76 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
+    android:layout_marginBottom="50dp"
     tools:context=".Exercise1">
 
-    <EditText
-        android:id="@+id/ednumDos"
-        android:layout_width="wrap_content"
+    <GridLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        tools:layout_editor_absoluteX="146dp"
-        tools:layout_editor_absoluteY="87dp" />
+        android:rowCount="2"
+        android:columnCount="2"
+        android:layout_marginBottom="50dp">
 
-    <TextView
-        android:id="@+id/txtSeg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:text="Segundo número: "
-        app:layout_constraintEnd_toStartOf="@+id/ednumDos"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="91dp" />
+        <TextView
+            android:id="@+id/txtPrim"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/primer_numero"
+            android:layout_gravity="center"
+            android:labelFor="@+id/etnFirstN"/>
 
-    <Button
-        android:id="@+id/btnCalcular"
-        android:layout_width="204dp"
-        android:layout_height="39dp"
-        android:onClick="sumar"
-        android:text="Calcular"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <EditText
+            android:id="@+id/ednumUno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_column="2"
+            app:layout_row="1"
+            android:layout_gravity="center"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/txtSeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/segundo_numero"
+            android:layout_gravity="center"
+            android:labelFor="@+id/etnSecondN"/>
+
+        <EditText
+            android:id="@+id/ednumDos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_column="2"
+            app:layout_row="1"
+            android:layout_gravity="center"
+            android:autofillHints="" />
+    </GridLayout>
 
     <TextView
         android:id="@+id/txtRes"
-        android:layout_width="36dp"
-        android:layout_height="40dp"
-        android:text="-"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.232"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="202dp" />
+        android:textAlignment="center"
+        />
 
-    <TextView
-        android:id="@+id/txtPrim"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btnCalcular"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Primer número: "
-        app:layout_constraintBottom_toTopOf="@+id/txtSeg"
-        app:layout_constraintEnd_toStartOf="@+id/ednumUno"
-        app:layout_constraintHorizontal_bias="0.222"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:text="@string/calcular"
+        android:onClick="sumar"
+        />
 
-    <EditText
-        android:id="@+id/ednumUno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+</GridLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+

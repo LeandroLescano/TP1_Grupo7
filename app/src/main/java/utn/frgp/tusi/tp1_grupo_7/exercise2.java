@@ -119,6 +119,9 @@ public class exercise2 extends AppCompatActivity {
         {
             VR = Integer.parseInt(VR2);
         }
+        if(Num == ""){
+            Num = "0";
+        }
          switch (Signo)
          {
              case "+":
@@ -131,7 +134,9 @@ public class exercise2 extends AppCompatActivity {
                  VR = VR * Integer.parseInt(Num);
                  break;
              case "/":
-                 VR = VR / Integer.parseInt(Num);
+                 if(Integer.parseInt(Num) > 0){
+                    VR = VR / Integer.parseInt(Num);
+                 }
                  break;
              case "":
                 VR += Integer.parseInt(Num);
