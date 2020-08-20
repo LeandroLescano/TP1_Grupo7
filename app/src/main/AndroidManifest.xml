@@ -9,14 +9,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:label="TP N°1">
+        <activity android:name=".exercise2"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="TP N°1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Exercise1" android:label="Suma"/>
+        <activity
+            android:name=".Exercise1"
+            android:label="Suma" />
     </application>
 
 </manifest>

@@ -6,4 +6,23 @@
     <string name="primer_numero">Primer número:</string>
     <string name="segundo_numero">Segundo número:</string>
     <string name="calcular">Calcular</string>
+    <string name="_10_5_5_6">10+5+5+6</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="_5">5</string>
+    <string name="_6">6</string>
+    <string name="_7">7</string>
+    <string name="_8">8</string>
+    <string name="_9">9</string>
+    <string name="_suma">+</string>
+    <string name="_resta">-</string>
+    <string name="_multi">*</string>
+    <string name="_division">/</string>
+    <string name="_0">0</string>
+    <string name="_borrar">Borrar</string>
+    <string name="_igual">=</string>
+
+
 </resources>

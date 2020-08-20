@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void redirectExercise2(View view) {
-        //Intent intent = new Intent(this, exercise2Layout.class);
-        //startActivity(intent);
+        Intent intent = new Intent(this, utn.frgp.tusi.tp1_grupo_7.exercise2.class);
+        startActivity(intent);
     }
 }
