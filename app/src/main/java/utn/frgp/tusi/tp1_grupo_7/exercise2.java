@@ -72,27 +72,27 @@ public class exercise2 extends AppCompatActivity {
                 Numero = NumeroViejo + "9";
                 break;
             case R.id.btnSuma:
-                Muestra.setText(MuestraVieja + "+");
+                if(!Validacion("+")){Muestra.setText(MuestraVieja + "+");
                 Cuenta(Numero);
-                Signo = "Suma";
+                Signo = "+";}
                 Numero = "";
                 break;
             case R.id.btnResta:
-                Muestra.setText(MuestraVieja + "-");
+                if(!Validacion("-")){Muestra.setText(MuestraVieja + "-");
                 Cuenta(Numero);
-                Signo = "Resta";
+                Signo = "-";}
                 Numero = "";
                 break;
             case R.id.btnMultiplicar:
-                Muestra.setText(MuestraVieja + "*");
+                if(!Validacion("*")){Muestra.setText(MuestraVieja + "*");
                 Cuenta(Numero);
-                Signo = "*";
+                Signo = "*";}
                 Numero = "";
                 break;
             case R.id.btnDivision:
-                Muestra.setText(MuestraVieja + "/");
+                if(!Validacion("/")){Muestra.setText(MuestraVieja + "/");
                 Cuenta(Numero);
-                Signo = "/";
+                Signo = "/";}
                 Numero = "";
                 break;
             case R.id.btnBorrar:
@@ -121,10 +121,10 @@ public class exercise2 extends AppCompatActivity {
         }
          switch (Signo)
          {
-             case "Suma":
+             case "+":
                  VR += Integer.parseInt(Num);
                  break;
-             case "Resta":
+             case "-":
                  VR -= Integer.parseInt(Num);
                  break;
              case "*":
@@ -141,4 +141,38 @@ public class exercise2 extends AppCompatActivity {
          Resultado.setText(VR2);
     }
 
+    public boolean Validacion(String Nuevo)
+    {
+        boolean Error = false;
+        String MuestraVieja = (String) Muestra.getText();
+        String UltimoCaracter= MuestraVieja.substring(MuestraVieja.length()-1);
+        switch (UltimoCaracter)
+        {
+            case "+":
+                MuestraVieja = MuestraVieja.substring(0,MuestraVieja.length()-1);
+                Muestra.setText(MuestraVieja+Nuevo);
+                Error = true;
+                Signo = Nuevo;
+            break;
+            case "-":
+                MuestraVieja = MuestraVieja.substring(0,MuestraVieja.length()-1);
+                Muestra.setText(MuestraVieja+Nuevo);
+                Error = true;
+                Signo = Nuevo;
+                break;
+            case "*":
+                MuestraVieja = MuestraVieja.substring(0,MuestraVieja.length()-1);
+                Muestra.setText(MuestraVieja+Nuevo);
+                Error = true;
+                Signo = Nuevo;
+                break;
+            case "/":
+                MuestraVieja = MuestraVieja.substring(0,MuestraVieja.length()-1);
+                Muestra.setText(MuestraVieja+Nuevo);
+                Error = true;
+                Signo = Nuevo;
+                break;
+        }
+        return  Error;
+    }
 }
