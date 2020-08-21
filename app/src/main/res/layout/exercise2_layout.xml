@@ -180,9 +180,9 @@
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:onClick="SeleccionDeBoton"
                 android:text="@string/_borrar"
-                android:textSize="18sp"
-                android:onClick="SeleccionDeBoton" />
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/btn0"

@@ -47,12 +47,12 @@
             android:id="@+id/ednumDos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:autofillHints=""
             android:ems="10"
             android:inputType="number"
             app:layout_column="2"
-            app:layout_row="1"
-            android:layout_gravity="center"
-            android:autofillHints="" />
+            app:layout_row="1" />
     </GridLayout>
 
     <TextView

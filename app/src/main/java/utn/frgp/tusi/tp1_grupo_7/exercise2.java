@@ -150,7 +150,16 @@ public class exercise2 extends AppCompatActivity {
     {
         boolean Error = false;
         String MuestraVieja = (String) Muestra.getText();
+        if(!MuestraVieja.isEmpty()){
         String UltimoCaracter= MuestraVieja.substring(MuestraVieja.length()-1);
+            if(Nuevo == "*" || Nuevo == "/" || Nuevo == "+") {
+                if(MuestraVieja.equals("-")){
+                    MuestraVieja = "-";
+                    Muestra.setText(MuestraVieja);
+                    Error = true;
+                    UltimoCaracter = "";
+                }
+            }
         switch (UltimoCaracter)
         {
             case "+":
@@ -178,6 +187,15 @@ public class exercise2 extends AppCompatActivity {
                 Signo = Nuevo;
                 break;
         }
+        }
+        else{
+            if(Nuevo == "*" || Nuevo == "/" || Nuevo == "+"){
+                MuestraVieja = "";
+                Muestra.setText(MuestraVieja);
+                Error = true;
+            }
+        }
         return  Error;
+
     }
 }
